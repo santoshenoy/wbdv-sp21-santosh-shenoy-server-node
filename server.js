@@ -43,5 +43,8 @@ require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
 require('./controllers/quiz-attempts-controller')(app)
 
-require('dotenv').config();
-app.listen(process.env.PORT || 3001);
+//require('dotenv').config();
+//app.listen(process.env.PORT || 3001);
+app.listen(process.env.PORT || 3001, function(){
+    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+})

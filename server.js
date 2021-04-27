@@ -10,7 +10,7 @@ app.use(bodyParser.json())
 
 // Use mongoose to connect to a Mongo database
 const mongoose = require('mongoose');
-const mongoAtlasUri = 'mongodb+srv://santoshenoy:santosh@12345@cluster0.r3dxd.mongodb.net/whiteboard';
+const mongoAtlasUri = 'mongodb+srv://santoshenoy:santosh@12345@cluster0.r3dxd.mongodb.net/whiteboard?retryWrites=true&w=majority&ssl=true';
 try {
     // Connect to the MongoDB cluster
     mongoose.connect(mongoAtlasUri,
